@@ -3,60 +3,60 @@
       "id": "1",
       "name": "Chrystal Leather Bag",
       "image": "https://images.pexels.com/photos/4830927/pexels-photo-4830927.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "Price": 575
+      "price": 575
     },
     {
       "id": "2",
       "name": "President Bag",
-      "image": "https://images.pexels.com/photos/2081199/pexels-photo-2081199.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "Price": 2482
+      "image": "https://images.pexels.com/photos/10334932/pexels-photo-10334932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "price": 2482
     },
     {
       "id": "3",
       "name": "Delsey School Bag",
       "image": "https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "Price": 969
+      "price": 969
     },
     {
       "id": "4",
       "name": "Samsonite Travel Bag",
       "image": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "Price": 1609
+      "price": 1609
     },
     {
       "id": "5",
       "name": "Jute -Shopping Bag",
       "image": "https://images.pexels.com/photos/4068314/pexels-photo-4068314.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-      "Price": 958
+      "price": 958
     },
     {
       "id": "6",
       "name": "Marks Travel Bag",
       "image": "https://images.pexels.com/photos/732632/pexels-photo-732632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "Price": 2287
+      "price": 2287
     },
     {
       "id": "7",
       "name": "Adidas School Bag",
       "image": "https://images.pexels.com/photos/1102874/pexels-photo-1102874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "Price": 419
+      "price": 419
     },
     {
       "id": "8",
       "name": "Hartmann Bag",
       "image": "https://images.pexels.com/photos/2452345/pexels-photo-2452345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "Price": 1719
+      "price": 1719
     },
     {
       "id": "9",
       "name": "Prada Bag",
       "image": "https://images.pexels.com/photos/4830930/pexels-photo-4830930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "Price": 3719
+      "price": 3719
     },
     {
       "id": "10",
       "name": "Corporate Bag",
       "image": "https://images.pexels.com/photos/4134794/pexels-photo-4134794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "Price": 2232
+      "price": 2232
     }
   ]
