@@ -16,8 +16,19 @@ const Shop = () => {
 
   //!--------- add selected data to Cart -----------
   const addToCart = (product) => {
-    const newCartItem = [...cartItems, product];
-    setCartItem(newCartItem);
+    if (cartItems.length<4) {
+      const newCartItem = [...cartItems, product];
+      setCartItem(newCartItem);
+    }
+    else{
+      alert("Maximum 4 items added to the cart");
+    }
+    
+  };
+
+  //!--------- remove all data from Cart -----------
+  const emptyCart = () => {
+    setCartItem([]);
   };
 
   return (
@@ -36,7 +47,7 @@ const Shop = () => {
           </div>
         </div>
         <div className="col-lg-3 col-md-3 col-sm-4 cart-container">
-          <Cart cartItems={cartItems}></Cart>
+          <Cart cartItems={cartItems} emptyCart={emptyCart}></Cart>
         </div>
       </div>
     </div>
