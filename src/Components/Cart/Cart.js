@@ -1,16 +1,16 @@
 import React from "react";
 import "./Cart.css"
 
-const Cart = () => {
+const Cart = ({cartItems}) => {
+  console.log(cartItems);
   return (
     <div className="cart-area p-4">
       <h4>Selected Bags: </h4>
 
       <div className="selected-items">
-        <li>dsav</li>
-        <li>dsav</li>
-        <li>dsav</li>
-        <li>dsav</li>
+        {
+          cartItems.map(cartItem=> <li key={cartItem.id}>{cartItem.name}</li> )
+        }
       </div>
 
       <div className="button-area my-3">
