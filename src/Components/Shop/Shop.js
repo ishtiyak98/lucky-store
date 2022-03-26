@@ -16,14 +16,16 @@ const Shop = () => {
 
   //!--------- add selected data to Cart -----------
   const addToCart = (product) => {
-    if (cartItems.length<4) {
-      const newCartItem = [...cartItems, product];
-      setCartItem(newCartItem);
-    }
-    else{
+    if (cartItems.length < 4) {
+      if (!cartItems.includes(product)) {
+        const newCartItem = [...cartItems, product];
+        setCartItem(newCartItem);
+      } else {
+        alert("Duplicate item found in the cart");
+      }
+    } else {
       alert("Maximum 4 items added to the cart");
     }
-    
   };
 
   //!--------- remove all data from Cart -----------
