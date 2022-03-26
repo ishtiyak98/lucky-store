@@ -1,14 +1,13 @@
 .cart-area{
     position: sticky;
     top: 0;
-    margin-top: 25px;
     border-radius: 20px;
     padding: 25px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .selected-items{
-    margin: 30px 0px;
+    padding: 5px 10px;
 }
 
 .cart-item{
@@ -33,6 +32,10 @@
 .item-name p{
     font-size: 1.1rem;
     font-weight: 500;
+}
+
+.remove-icon{
+    margin-left: 10px;
 }
 
 .remove-icon button{

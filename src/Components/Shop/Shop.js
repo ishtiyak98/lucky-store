@@ -5,7 +5,7 @@ import "./Shop.css";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [cartItems, setCartItem] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   const [chosenItem, setChosenItem] = useState([]);
 
   //!--------- load all data from JSON -----------
@@ -20,7 +20,7 @@ const Shop = () => {
     if (cartItems.length < 4) {
       if (!cartItems.includes(product)) {
         const newCartItem = [...cartItems, product];
-        setCartItem(newCartItem);
+        setCartItems(newCartItem);
       } else {
         alert("Duplicate item found in the cart");
       }
@@ -42,7 +42,7 @@ const Shop = () => {
 
   //!--------- remove all data from Cart -----------
   const emptyCart = () => {
-    setCartItem([]);
+    setCartItems([]);
     setChosenItem([]);
   };
 
@@ -50,18 +50,20 @@ const Shop = () => {
     <div className="shop-container">
       <h3 className="text-center my-4">Choose Your 4 Bags</h3>
       <div className="row gx-0">
-        <div className="col-lg-9 col-md-9 col-sm-8">
-          <div className="product-container row gy-4">
-            {products.map((product) => (
-              <Product
-                product={product}
-                key={product.id}
-                addToCart={addToCart}
-              ></Product>
-            ))}
+        <div className="col-lg-9 col-md-8 col-sm-6 col-5">
+          <div className="product-container mx-lg-5 mx-3">
+            <div className="row gy-4">
+              {products.map((product) => (
+                <Product
+                  product={product}
+                  key={product.id}
+                  addToCart={addToCart}
+                ></Product>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-3 col-sm-4 cart-container">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-7 cart-container">
           <Cart
             cartItems={cartItems}
             chooseCartItem={chooseCartItem}

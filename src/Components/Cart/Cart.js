@@ -4,6 +4,13 @@ import "./Cart.css";
 import { FaTrash } from "react-icons/fa";
 
 const Cart = ({ cartItems, emptyCart, chooseCartItem, chosenItem }) => {
+  const removeItem = (cartItem) => {
+    console.log(cartItem);
+    const removeCartItem = cartItems.indexOf(cartItem);
+    console.log(removeCartItem);
+    cartItems.splice(removeCartItem, 1);
+  };
+  console.log(cartItems);
   return (
     <div className="cart-area">
       <h4>Selected Bags : </h4>
@@ -21,7 +28,7 @@ const Cart = ({ cartItems, emptyCart, chooseCartItem, chosenItem }) => {
               <p className="mb-0 ms-3">{cartItem.name}</p>
             </div>
             <div className="remove-icon">
-              <button>
+              <button onClick={() => removeItem(cartItem)}>
                 <FaTrash></FaTrash>
               </button>
             </div>
