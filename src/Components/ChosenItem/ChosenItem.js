@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
 
-const ChosenItem = ({ chosenItem }) => {
+const ChosenItem = ({ chosenItem, removeChosenItem }) => {
   return (
     <div>
       {chosenItem.map((item) => (
@@ -15,21 +15,13 @@ const ChosenItem = ({ chosenItem }) => {
               <p className="mb-0 ms-3">{item.name}</p>
             </div>
             <div className="remove-icon">
-              <button>
+              <button onClick={removeChosenItem}>
                 <FaTrash></FaTrash>
               </button>
             </div>
           </div>
         </div>
       ))}
-
-      {/* <div className="chosen-item">
-        <h5>Chosen Item is: </h5>
-        <div className="cart-item d-flex align-items-center">
-          <img src={chosenItem.image} alt="" />
-          <p className="mb-0 ms-3">{chosenItem.name}</p>
-        </div>
-      </div> */}
     </div>
   );
 };

@@ -3,14 +3,8 @@ import ChosenItem from "../ChosenItem/ChosenItem";
 import "./Cart.css";
 import { FaTrash } from "react-icons/fa";
 
-const Cart = ({ cartItems, emptyCart, chooseCartItem, chosenItem }) => {
-  const removeItem = (cartItem) => {
-    console.log(cartItem);
-    const removeCartItem = cartItems.indexOf(cartItem);
-    console.log(removeCartItem);
-    cartItems.splice(removeCartItem, 1);
-  };
-  console.log(cartItems);
+const Cart = ({ cartItems, emptyCart, chooseCartItem, chosenItem, removeItem, removeChosenItem }) => {
+
   return (
     <div className="cart-area">
       <h4>Selected Bags : </h4>
@@ -36,7 +30,7 @@ const Cart = ({ cartItems, emptyCart, chooseCartItem, chosenItem }) => {
         ))}
       </div>
 
-      <ChosenItem chosenItem={chosenItem}></ChosenItem>
+      <ChosenItem chosenItem={chosenItem} removeChosenItem={removeChosenItem}></ChosenItem>
 
       <div className="button-area my-3">
         <button className="btn btn-success my-1" onClick={chooseCartItem}>

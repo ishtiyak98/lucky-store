@@ -40,6 +40,17 @@ const Shop = () => {
     }
   };
 
+  //!--------- remove item from Cart -----------
+  const removeItem = (cartItem) => {
+    const restItem = cartItems.filter((item) => item.id !== cartItem.id);
+    setCartItems(restItem);
+  };
+
+  //!--------- remove item from Chosen-field -----------
+  const removeChosenItem = () => {
+    setChosenItem([]);
+  };
+
   //!--------- remove all data from Cart -----------
   const emptyCart = () => {
     setCartItems([]);
@@ -49,8 +60,8 @@ const Shop = () => {
   return (
     <div className="shop-container">
       <h3 className="text-center my-4">Choose Your 4 Bags</h3>
-      <div className="row gx-0">
-        <div className="col-lg-9 col-md-8 col-sm-6 col-5">
+      <div className="row gx-0 gy-4 flex-sm-column-reverse flex-column-reverse flex-md-row flex-lg-row">
+        <div className="col-lg-9 col-md-8">
           <div className="product-container mx-lg-5 mx-3">
             <div className="row gy-4">
               {products.map((product) => (
@@ -63,12 +74,14 @@ const Shop = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 col-7 cart-container">
+        <div className="col-lg-3 col-md-4 cart-container">
           <Cart
             cartItems={cartItems}
             chooseCartItem={chooseCartItem}
             chosenItem={chosenItem}
             emptyCart={emptyCart}
+            removeItem={removeItem}
+            removeChosenItem={removeChosenItem}
           ></Cart>
         </div>
       </div>
