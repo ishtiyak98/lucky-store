@@ -31,11 +31,12 @@ const Shop = () => {
 
   //!--------- Choose Cart randomly -----------
   const chooseCartItem = () => {
-    if (cartItems) {
-      const randomNumber = Math.round(Math.random() * 3);
+    console.log(cartItems);
+    if (cartItems.length > 0) {
+      const randomNumber = Math.round(Math.random() * (cartItems.length - 1));
       console.log(randomNumber);
       setChosenItem([cartItems[randomNumber]]);
-    } else {
+    } else if (cartItems.length === 0) {
       alert("Cart is empty !!");
     }
   };

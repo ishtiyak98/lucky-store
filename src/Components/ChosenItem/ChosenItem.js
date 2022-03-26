@@ -7,7 +7,7 @@ const ChosenItem = ({ chosenItem, removeChosenItem }) => {
       {chosenItem.map((item) => (
         <div className="chosen-item" key={item.id}>
           <h5>Chosen Item is: </h5>
-          <div className="cart-item d-flex align-items-center">
+          <div className="cart-item d-flex align-items-center ms-2">
             <div className="cart-img-container">
               <img src={item.image} alt="" />
             </div>
