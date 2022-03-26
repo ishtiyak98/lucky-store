@@ -1,5 +1,5 @@
 .blog-area{
-    width: 90%;
+    width: 97%;
     margin: 0 auto;
     margin-bottom: 50px;
     padding: 30px 40px;
@@ -12,6 +12,6 @@
 }
 
 .answer-container p{
-    font-size: 1.2rem;
+    font-size: 18px;
     text-align: justify;
 }
