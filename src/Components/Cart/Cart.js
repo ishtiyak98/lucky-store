@@ -1,23 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import ChosenItem from "../ChosenItem/ChosenItem";
 import "./Cart.css";
+import { FaTrash } from "react-icons/fa";
 
-const Cart = ({ cartItems, emptyCart }) => {
-  const [chosenItem, setChosenItem] = useState([]);
-
-  //!--------- Choose Cart randomly -----------
-  const chooseCartItem = () => {
-    if (cartItems) {
-      const randomNumber = Math.round(Math.random() * 3);
-      setChosenItem([cartItems[randomNumber]]);
-    } 
-    else {
-      alert("Cart is empty !!");
-    }
-  };
-
+const Cart = ({ cartItems, emptyCart, chooseCartItem, chosenItem }) => {
   return (
-    <div className="cart-area p-4">
+    <div className="cart-area">
       <h4>Selected Bags : </h4>
 
       <div className="selected-items">
@@ -26,11 +14,22 @@ const Cart = ({ cartItems, emptyCart }) => {
             className="cart-item d-flex align-items-center"
             key={cartItem.id}
           >
-            <img src={cartItem.image} alt="" />
-            <p className="mb-0 ms-3">{cartItem.name}</p>
+            <div className="cart-img-container">
+              <img src={cartItem.image} alt="" />
+            </div>
+            <div className="item-name">
+              <p className="mb-0 ms-3">{cartItem.name}</p>
+            </div>
+            <div className="remove-icon">
+              <button>
+                <FaTrash></FaTrash>
+              </button>
+            </div>
           </div>
         ))}
       </div>
+
+      <ChosenItem chosenItem={chosenItem}></ChosenItem>
 
       <div className="button-area my-3">
         <button className="btn btn-success my-1" onClick={chooseCartItem}>
@@ -41,8 +40,6 @@ const Cart = ({ cartItems, emptyCart }) => {
           Choose Again
         </button>
       </div>
-
-      <ChosenItem chosenItem={chosenItem}></ChosenItem>
     </div>
   );
 };
