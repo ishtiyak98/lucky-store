@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./Shop.css";
@@ -22,10 +23,18 @@ const Shop = () => {
         const newCartItem = [...cartItems, product];
         setCartItems(newCartItem);
       } else {
-        alert("Duplicate item found in the cart");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Duplicate Items Found in Cart!',
+        })
       }
     } else {
-      alert("Maximum 4 items added to the cart");
+      Swal.fire({
+        icon: 'info',
+        title: 'Oops...',
+        text: 'You can add only 4 items',
+      })
     }
   };
 
